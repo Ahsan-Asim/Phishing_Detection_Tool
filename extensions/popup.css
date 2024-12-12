@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 300px;
+}
+
+/* Welcome Screen */
+#welcome-screen {
+  text-align: center;
+}
+
+.welcome-message h1,
+.welcome-message h2 {
+  margin: 0;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-message h1 {
+  font-size: 1.8rem;
+}
+
+.welcome-message h2 {
+  font-size: 1.4rem;
+  color: #00e676;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  font-size: 1rem;
+  margin: 10px 0 20px 0;
+  color: #ccc;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  background: #1f1f1f;
+  color: #fff;
+  border: 1px solid #00e676;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #00e676;
+  color: #121212;
+}
+
+.btn:disabled {
+  background: #555;
+  border: 1px solid #777;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* Main Screen */
+#main-screen {
+  text-align: center;
+}
+
+#main-screen h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

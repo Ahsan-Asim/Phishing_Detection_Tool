@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection Extension</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="welcome-screen" class="screen">
+        <div class="welcome-message">
+            <h1>Welcome to</h1>
+            <h2>Phishing Detection Tool</h2>
+            <p>Protect your emails from phishing attacks with ease.</p>
+        </div>
+        <button id="continue-btn" class="btn">Continue</button>
+    </div>
+
+    <div id="main-screen" class="screen hidden">
+        <h3>Phishing Detection</h3>
+        <button id="auth-btn" class="btn">Authenticate with Gmail</button>
+        <button id="open-results-btn" class="btn" disabled>View Emails</button>
+        <button id="stop-btn" class="btn" disabled>Stop Background Processing</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
+
+ 

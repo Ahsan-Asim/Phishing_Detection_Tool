@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Phishing Detection Extension",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "identity"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "https://www.googleapis.com/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
