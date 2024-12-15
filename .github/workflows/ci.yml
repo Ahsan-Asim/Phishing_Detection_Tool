@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main # Change this to your default branch if necessary
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8" # Specify the Python version you want to use
+
+      - name: Install dependencies
+        run: |
+          cd backend  # Navigate to the backend folder
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          cd backend  # Navigate to the backend folder again if needed
+          pytest tests/  # Run tests in the tests directory
