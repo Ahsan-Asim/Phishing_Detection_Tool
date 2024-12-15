@@ -2,8 +2,7 @@
 
 import json
 import pytest
-from shipping_backend.app import app  # Adjust the import based on your app's structure
-
+from app import app
 @pytest.fixture
 def client():
     app.config['TESTING'] = True
