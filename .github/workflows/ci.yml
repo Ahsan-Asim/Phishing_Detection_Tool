@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd shipping_backend  # Navigate to the backend folder
+          cd shipping_backend
           pip install -r requirements.txt
 
       - name: Install gdown
@@ -32,6 +32,8 @@ jobs:
           unzip phishing_model.zip -d phishing_model
 
       - name: Run tests
+        env:
+          PYTHONPATH: ./shipping_backend # Ensure this points to the correct directory
         run: |
-          cd shipping_backend  # Navigate to the backend folder again if needed
+          cd shipping_backend  # Navigate to the backend folder first
           pytest tests/  # Run tests in the tests directory
