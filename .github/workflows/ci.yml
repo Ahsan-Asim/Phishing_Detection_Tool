@@ -28,15 +28,10 @@ jobs:
 
       - name: Download Model from Google Drive
         run: |
-          curl -L -o phishing_model.zip "https://drive.google.com/uc?export=download&id=1itUvANQGCf3xNf83W4fYDzUYStSVbtmK"
-          if [ -f "phishing_model.zip" ]; then
-            unzip phishing_model.zip -d phishing_model
-          else
-            echo "phishing_model.zip not found, download failed."
-            exit 1
-          fi
+          gdown "https://drive.google.com/uc?id=1itUvANQGCf3xNf83W4fYDzUYStSVbtmK" -O phishing_model.zip
+          unzip phishing_model.zip -d phishing_model
 
       - name: Run tests
         run: |
           cd shipping_backend
-          pytest shipping_backend/tests/
+          pytest tests/
