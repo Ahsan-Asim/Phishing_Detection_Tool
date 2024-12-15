@@ -23,6 +23,9 @@ jobs:
           cd shipping_backend
           pip install -r requirements.txt
 
+      - name: Install gdown
+        run: pip install gdown
+
       - name: Download Model from Google Drive
         run: |
           gdown https://drive.google.com/uc?export=download&id=1itUvANQGCf3xNf83W4fYDzUYStSVbtmK
