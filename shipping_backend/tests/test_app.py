@@ -2,7 +2,7 @@
 
 import json
 import pytest
-from app import app
+from ..app import app  # Use relative import to access app.py
 @pytest.fixture
 def client():
     app.config['TESTING'] = True

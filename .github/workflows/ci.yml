@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd shipping_backend
+          cd shipping_backend  # Navigate to the backend folder
           pip install -r requirements.txt
 
       - name: Install gdown
@@ -33,5 +33,5 @@ jobs:
 
       - name: Run tests
         run: |
-          cd shipping_backend
-          pytest tests/
+          cd shipping_backend  # Navigate to the backend folder again if needed
+          pytest tests/  # Run tests in the tests directory
