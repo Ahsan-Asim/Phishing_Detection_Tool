@@ -2,7 +2,7 @@
 
 import json
 import pytest
-from app import app  # Adjust the import based on your app's structure
+from shipping_backend.app import app  # Adjust the import based on your app's structure
 
 @pytest.fixture
 def client():
