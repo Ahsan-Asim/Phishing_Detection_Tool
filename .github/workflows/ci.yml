@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main # Change this to your default branch if necessary
+      - main
 
 jobs:
   build:
@@ -16,14 +16,15 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v2
         with:
-          python-version: "3.8" # Specify the Python version you want to use
+          python-version: "3.8"
 
       - name: Install dependencies
         run: |
-          cd shipping_backend  # Navigate to the backend folder
+          cd shipping_backend
           pip install -r requirements.txt
 
       - name: Run tests
+        env:
+          PYTHONPATH: ../shipping_backend # Add shipping_backend to Python path
         run: |
-          cd shipping_backend  # Navigate to the backend folder again if needed
-          pytest tests/  # Run tests in the tests directory
+          pytest shipping_backend/tests/
