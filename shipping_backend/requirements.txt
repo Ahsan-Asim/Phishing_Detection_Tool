@@ -2,4 +2,4 @@ Flask
 flask-cors
 transformers
 torch
-pytest  # Include pytest for testing
+pytest  
