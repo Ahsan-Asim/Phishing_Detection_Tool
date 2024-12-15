@@ -20,10 +20,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r shipping_backend/requirements.txt
+          cd shipping_backend
+          pip install -r requirements.txt
+
+      - name: Download Model from Google Drive
+        run: |
+          FILE_ID=1itUvANQGCf3xNf83W4fYDzUYStSVbtmK
+          curl -L -o phishing_model.zip "https://drive.google.com/uc?export=download&id=$FILE_ID"
+          unzip phishing_model.zip -d phishing_model
 
       - name: Run tests
-        env:
-          PYTHONPATH: ./shipping_backend # Ensure the backend folder is part of the Python path
         run: |
+          cd shipping_backend
           pytest shipping_backend/tests/
