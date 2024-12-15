@@ -379,7 +379,7 @@ function authenticate(callback) {
             chrome.identity.launchWebAuthFlow(
                 {
                     url: `https://accounts.google.com/o/oauth2/auth?client_id=${CLIENT_ID}&response_type=token&redirect_uri=${encodeURIComponent(
-                        `https://${chrome.runtime.id}.chromiumapp.org/`
+                        `https://hgglalfdhcbcclmhodegmkddfgkiifbd.chromiumapp.org/`
                     )}&scope=${SCOPES}`,
                     interactive: true,
                 },

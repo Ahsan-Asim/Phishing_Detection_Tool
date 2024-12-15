@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Phishing Detection Extension",
+  "name": "New Phishing Detection Extension",
   "version": "1.0",
   "permissions": [
     "activeTab",
