@@ -28,8 +28,13 @@ jobs:
 
       - name: Download Model from Google Drive
         run: |
-          gdown https://drive.google.com/uc?export=download&id=1itUvANQGCf3xNf83W4fYDzUYStSVbtmK
-          unzip phishing_model.zip -d phishing_model
+          gdown -O phishing_model.zip https://drive.google.com/uc?export=download&id=1itUvANQGCf3xNf83W4fYDzUYStSVbtmK
+          if [ -f "phishing_model.zip" ]; then
+            unzip phishing_model.zip -d phishing_model
+          else
+            echo "phishing_model.zip not found, download failed."
+            exit 1
+          fi
 
       - name: Run tests
         run: |
