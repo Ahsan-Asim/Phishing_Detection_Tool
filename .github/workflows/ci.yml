@@ -31,6 +31,10 @@ jobs:
           gdown "https://drive.google.com/uc?id=1itUvANQGCf3xNf83W4fYDzUYStSVbtmK" -O phishing_model.zip
           unzip phishing_model.zip -d phishing_model
 
+      - name: List files in phishing_model directory
+        run: |
+          ls -l phishing_model
+
       - name: Run tests
         env:
           PYTHONPATH: ./shipping_backend # Ensure this points to the correct directory
