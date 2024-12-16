@@ -1,7 +1,12 @@
 # tests/test_app.py
 import json
 import pytest
-from app import app  # Absolute import
+# from app import app  # Absolute import
+import os, sys
+cwd = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(f'{cwd}/../')
+from app import app
+
 
 @pytest.fixture
 def client():
