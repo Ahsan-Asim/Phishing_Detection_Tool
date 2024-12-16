@@ -37,7 +37,7 @@ jobs:
 
       - name: Run tests
         env:
-          PYTHONPATH: ./shipping_backend # Ensure this points to the correct directory
+          PYTHONPATH: ./shipping_backend
         run: |
-          cd shipping_backend  # Navigate to the backend folder first
-          pytest tests/  # Run tests in the tests directory
+          cd shipping_backend
+          pytest tests/
