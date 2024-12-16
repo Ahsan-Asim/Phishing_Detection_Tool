@@ -30,6 +30,7 @@ jobs:
         run: |
           gdown "https://drive.google.com/uc?id=1itUvANQGCf3xNf83W4fYDzUYStSVbtmK" -O phishing_model.zip
           unzip phishing_model.zip -d phishing_model
+          ls -l phishing_model  # List contents of the model folder to verify download
 
       - name: List files in phishing_model directory
         run: |
