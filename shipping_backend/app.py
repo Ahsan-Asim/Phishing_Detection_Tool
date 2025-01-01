@@ -9,6 +9,7 @@ app = Flask(__name__)
 CORS(app)  # This allows all origins to access the API
 
 # Load the model
+# tokenizer = AutoTokenizer.from_pretrained("./phishing_model")
 tokenizer = AutoTokenizer.from_pretrained("./phishing_model")
 model = AutoModelForSequenceClassification.from_pretrained("./phishing_model")
 
