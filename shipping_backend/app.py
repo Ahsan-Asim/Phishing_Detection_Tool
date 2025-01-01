@@ -11,11 +11,13 @@ CORS(app)  # This allows all origins to access the API
 # Load the model
 # tokenizer = AutoTokenizer.from_pretrained("../phishing_model")
 # model = AutoModelForSequenceClassification.from_pretrained(".,/phishing_model")
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-model_name = "bert-finetuned-phishing"  # Replace with your model ID on Hugging Face Hub
+
+model_name = "ealvaradob/bert-finetuned-phishing"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
+
+print("Model and tokenizer loaded successfully.")
 
 
 
